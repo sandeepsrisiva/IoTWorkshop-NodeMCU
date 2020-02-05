@@ -4,12 +4,12 @@
 
 // Update these with values suitable for your network.
 
-const char* ssid = "******"; // change to your home wifi name
-const char* password = "*****"; //  change to your home wifi password
-const char* mqtt_server = "iot.eclipse.org"; // MQTT broker Name
+const char* ssid = "sandeep"; // change to your home wifi name
+const char* password = "22122012"; //  change to your home wifi password
+const char* mqtt_server = "54.89.218.10"; // MQTT broker Name
 
 
-#define CLIENT_ID "*****" // Give your client id here
+#define CLIENT_ID "clientid1" // Give your client id here
 
 
 WiFiClient espClient;
@@ -89,7 +89,7 @@ void setup() {
   setup_wifi();
 
   client.setServer(mqtt_server, 1883);
-  client.subscribe("*****"); // your topic name
+  client.subscribe("led-ctr"); // your topic name
   client.setCallback(callback);
 
 
